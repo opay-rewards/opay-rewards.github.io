@@ -1,0 +1,419 @@
+/* ==============================
+   ORay OTP
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #171717;
+}
+
+
+/* ==============================
+   PAGE
+   ============================== */
+
+.otp-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.top {
+    width: 100%;
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 500;
+
+    color: #1e1e1e;
+
+    letter-spacing: -2px;
+}
+
+
+/* ==============================
+   OTP CONTENT
+   ============================== */
+
+.otp-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 60px 7% 60px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   HEADING
+   ============================== */
+
+.otp-container h1 {
+    font-size: 42px;
+    font-weight: 600;
+
+    color: #171717;
+
+    line-height: 1.2;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==============================
+   INSTRUCTION
+   ============================== */
+
+.instruction {
+    font-size: 23px;
+    color: #777;
+
+    line-height: 1.5;
+}
+
+
+/* ==============================
+   PHONE NUMBER
+   ============================== */
+
+.phone-number {
+    margin-top: 10px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #15135c;
+}
+
+
+/* ==============================
+   OTP BOXES
+   ============================== */
+
+.otp-boxes {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 65px;
+}
+
+.otp-input {
+    width: 78px;
+    height: 90px;
+
+    border: 2px solid #e2e2e4;
+    border-radius: 25px;
+
+    background: #f8f8fa;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 36px;
+    font-weight: 600;
+
+    color: #15135c;
+}
+
+.otp-input:focus {
+    border-color: #7bd8bd;
+}
+
+
+/* ==============================
+   COUNTDOWN
+   ============================== */
+
+.countdown {
+    margin-top: 42px;
+
+    font-size: 21px;
+
+    color: #999;
+}
+
+.countdown strong {
+    color: #15135c;
+}
+
+
+/* ==============================
+   VERIFY BUTTON
+   ============================== */
+
+.verify-button {
+    width: 100%;
+    height: 115px;
+
+    margin-top: 65px;
+
+    border-radius: 70px;
+
+    background: #7bd8bd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CHANGE NUMBER
+   ============================== */
+
+.change-number {
+    margin-top: 55px;
+
+    color: #13ae82;
+
+    font-size: 24px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CANCEL
+   ============================== */
+
+.cancel {
+    margin-top: 40px;
+
+    color: #b9c5ca;
+
+    font-size: 27px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   LICENSE
+   ============================== */
+
+.license {
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #777;
+
+    font-size: 17px;
+
+    text-align: center;
+}
+
+.license strong {
+    color: #15135c;
+}
+
+.cbn-icon {
+    font-size: 19px;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .top {
+        height: 85px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .otp-container {
+        padding: 50px 5% 50px;
+    }
+
+    .otp-container h1 {
+        font-size: 35px;
+    }
+
+    .instruction {
+        font-size: 20px;
+    }
+
+    .phone-number {
+        font-size: 22px;
+    }
+
+    .otp-boxes {
+        gap: 13px;
+    }
+
+    .otp-input {
+        width: 65px;
+        height: 78px;
+
+        border-radius: 21px;
+
+        font-size: 31px;
+    }
+
+    .verify-button {
+        height: 100px;
+    }
+}
+
+
+/* ==============================
+   ANDROID PHONE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .top {
+        height: 75px;
+
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .otp-container {
+        padding: 45px 5% 45px;
+    }
+
+    .otp-container h1 {
+        font-size: 29px;
+
+        margin-bottom: 20px;
+    }
+
+    .instruction {
+        font-size: 17px;
+
+        max-width: 330px;
+    }
+
+    .phone-number {
+        font-size: 19px;
+    }
+
+
+    /* OTP */
+
+    .otp-boxes {
+        gap: 7px;
+
+        margin-top: 50px;
+    }
+
+    .otp-input {
+        width: 48px;
+        height: 62px;
+
+        border-radius: 16px;
+
+        font-size: 25px;
+    }
+
+
+    /* Countdown */
+
+    .countdown {
+        margin-top: 32px;
+
+        font-size: 17px;
+    }
+
+
+    /* Verify */
+
+    .verify-button {
+        height: 60px;
+
+        margin-top: 50px;
+
+        font-size: 22px;
+    }
+
+
+    /* Links */
+
+    .change-number {
+        margin-top: 40px;
+
+        font-size: 19px;
+    }
+
+    .cancel {
+        margin-top: 32px;
+
+        font-size: 23px;
+    }
+
+
+    /* License */
+
+    .license {
+        margin-top: 40px;
+
+        font-size: 12px;
+    }
+
+    .cbn-icon {
+        font-size: 15px;
+    }
+}
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,493 @@
+/* ==============================
+   ORay Login
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #171717;
+}
+
+
+/* ==============================
+   PAGE
+   ============================== */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.top {
+    width: 100%;
+    height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: 500;
+    color: #1e1e1e;
+    letter-spacing: -2px;
+}
+
+
+/* ==============================
+   LOGIN CONTENT
+   ============================== */
+
+.login-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 45px 7% 60px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==============================
+   PHONE BOX
+   ============================== */
+
+.phone-box {
+    width: 100%;
+    height: 125px;
+
+    background: #f8f8fa;
+
+    border-radius: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 38px;
+
+    border: 1px solid #f2f2f3;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    flex-shrink: 0;
+}
+
+.flag {
+    font-size: 47px;
+    line-height: 1;
+}
+
+.code {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.divider {
+    height: 62px;
+    width: 2px;
+
+    background: #d8d8d8;
+
+    margin: 0 55px;
+}
+
+.phone-input {
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 40px;
+    font-weight: 400;
+
+    color: #222;
+}
+
+.phone-input::placeholder {
+    color: #222;
+    opacity: 1;
+}
+
+
+/* ==============================
+   CLEAR BUTTON
+   ============================== */
+
+.clear-button {
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #e3e3e5;
+
+    color: white;
+
+    font-size: 43px;
+    font-weight: 200;
+
+    line-height: 45px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
+   PASSWORD
+   ============================== */
+
+.password-box {
+    width: 100%;
+    height: 125px;
+
+    margin-top: 95px;
+
+    background: #f8f8fa;
+
+    border-radius: 38px;
+
+    border: 1px solid #f2f2f3;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 45px;
+}
+
+.password-input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 37px;
+
+    color: #222;
+}
+
+.password-input::placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+
+/* ==============================
+   FORGOT PASSWORD
+   ============================== */
+
+.forgot {
+    align-self: flex-end;
+
+    margin-top: 105px;
+
+    color: #999;
+
+    font-size: 34px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NEXT BUTTON
+   ============================== */
+
+.next-button {
+    width: 100%;
+    height: 125px;
+
+    margin-top: 75px;
+
+    border-radius: 70px;
+
+    background: #7bd8bd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 29px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CANCEL
+   ============================== */
+
+.cancel {
+    align-self: center;
+
+    margin-top: 72px;
+
+    color: #b9c5ca;
+
+    font-size: 38px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CREATE ACCOUNT
+   ============================== */
+
+.create-account {
+    align-self: center;
+
+    margin-top: 95px;
+
+    color: #13ae82;
+
+    font-size: 32px;
+
+    text-decoration: none;
+}
+
+
+/* ==============================
+   LICENSE
+   ============================== */
+
+.license {
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #777;
+
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.license strong {
+    color: #15135c;
+    font-weight: 700;
+}
+
+.cbn-icon {
+    font-size: 22px;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .top {
+        height: 85px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .login-container {
+        padding: 35px 5% 50px;
+    }
+
+    .phone-box,
+    .password-box,
+    .next-button {
+        height: 105px;
+    }
+
+    .code,
+    .phone-input {
+        font-size: 32px;
+    }
+
+    .flag {
+        font-size: 40px;
+    }
+
+    .divider {
+        margin: 0 35px;
+    }
+
+    .password-input {
+        font-size: 27px;
+    }
+
+    .forgot {
+        font-size: 28px;
+    }
+
+    .create-account {
+        font-size: 27px;
+    }
+
+    .license {
+        font-size: 17px;
+    }
+}
+
+
+/* ==============================
+   ANDROID PHONE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .top {
+        height: 75px;
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .login-container {
+        padding: 30px 5% 45px;
+    }
+
+    .phone-box {
+        height: 60px;
+        padding: 0 20px;
+        border-radius: 27px;
+    }
+
+    .country {
+        gap: 10px;
+    }
+
+    .flag {
+        font-size: 17px;
+    }
+
+    .code {
+        font-size: 22px;
+    }
+
+    .divider {
+        height: 43px;
+        margin: 0 18px;
+    }
+
+    .phone-input {
+        font-size: 20px;
+    }
+
+    .clear-button {
+        width: 35px;
+        height: 35px;
+
+        font-size: 29px;
+        line-height: 31px;
+    }
+
+
+    .password-box {
+        height: 60px;
+
+        margin-top: 60px;
+
+        padding: 0 20px;
+
+        border-radius: 27px;
+    }
+
+    .password-input {
+        font-size: 19px;
+    }
+
+
+    .forgot {
+        margin-top: 30px;
+
+        font-size: 22px;
+    }
+
+
+    .next-button {
+        height: 60px;
+
+        margin-top: 55px;
+
+        font-size: 23px;
+    }
+
+
+    .cancel {
+        margin-top: 35px;
+
+        font-size: 24px;
+    }
+
+
+    .create-account {
+        margin-top: 40px;
+
+        font-size: 21px;
+    }
+
+
+    .license {
+        margin-top: 35px;
+
+        font-size: 13px;
+    }
+
+    .cbn-icon {
+        font-size: 16px;
+    }
+}
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+.login-now {
+    color: #15135c;
+    font-weight: 600;
+    text-decoration: none;
+}

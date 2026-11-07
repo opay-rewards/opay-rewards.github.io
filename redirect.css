@@ -1,0 +1,293 @@
+/* ==============================
+   ORay Redirect
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #171717;
+}
+
+
+/* ==============================
+   PAGE
+   ============================== */
+
+.redirect-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 6%;
+}
+
+
+/* ==============================
+   CONTENT
+   ============================== */
+
+.redirect-content {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   LOGO
+   ============================== */
+
+/* ==============================
+   LOGO
+   ============================== */
+
+.logo {
+    width: 145px;
+    height: auto;
+
+    display: block;
+
+    align-self: flex-start;
+
+    margin-top: 0px;
+    margin-left: 6px;
+
+    margin-bottom: 65px;
+}
+
+
+/* ==============================
+   HEADING
+   ============================== */
+
+h1 {
+    color: #171717;
+
+    font-size: 34px;
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+
+/* ==============================
+   MESSAGE
+   ============================== */
+
+.message {
+    margin-top: 0px;
+
+    color: #888;
+
+    font-size: 19px;
+}
+
+
+/* ==============================
+   LOADER
+   ============================== */
+
+.loader {
+    width: 92px;
+    height: 92px;
+
+    margin-top: 65px;
+
+    border-radius: 50%;
+
+    border: 7px solid #e9f6f1;
+
+    border-top-color: #7bd8bd;
+    border-right-color: #15135c;
+
+    animation: spin 1.1s linear infinite;
+}
+
+
+/* ==============================
+   LOADER ANIMATION
+   ============================== */
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ==============================
+   LOADING TEXT
+   ============================== */
+
+.loading-text {
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 18px;
+}
+
+/* ==============================
+   ANIMATIONS
+   ============================== */
+
+@keyframes spin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.65);
+        opacity: 0.45;
+    }
+
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.license {
+    position: absolute;
+
+    bottom: 25px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+}
+
+
+/* ==============================
+   ANDROID PHONE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .redirect-page {
+        padding: 30px 7%;
+    }
+
+    h1 {
+        font-size: 25px;
+
+        line-height: 1.4;
+    }
+
+    .message {
+        font-size: 16px;
+
+        margin-top: 16px;
+    }
+
+    .loader {
+    width: 76px;
+    height: 76px;
+
+    margin-top: 55px;
+
+    border-width: 6px;
+}
+
+.loading-text {
+    font-size: 16px;
+}
+
+    .loader-ring {
+        width: 76px;
+        height: 76px;
+
+        border-width: 6px;
+    }
+
+    .loader-dot {
+        width: 11px;
+        height: 11px;
+
+        left: 32px;
+    }
+
+    .loading-text {
+        font-size: 16px;
+    }
+
+    .license {
+        font-size: 10px;
+
+        bottom: 18px;
+    }
+
+}
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+    .license {
+        margin-top: 35px;
+
+        font-size: 13px;
+        bottom: 0;
+    }

